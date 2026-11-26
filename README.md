@@ -1,38 +1,69 @@
-[![make.fun](https://make.fun/badge/news-image-20261125.svg)](https://make.fun/bounty/news-image-20261125)
-[![rank](https://make.fun/badge/news-image-20261125/akbare12/news-25-b106-numbers/rank.svg)](https://make.fun/bounty/news-image-20261125)
-[![reward](https://make.fun/badge/news-image-20261125/akbare12/news-25-b106-numbers/reward.svg)](https://make.fun/bounty/news-image-20261125)
+# Wednesday, November 25, 2026 — The World in One Page
 
-# The World Today — Wednesday 25 November 2026
+[![Bounty](https://make.fun/badge/news-image-20261125.svg)](https://make.fun/bounty/news-image-20261125)
+[![Rank](https://make.fun/badge/news-image-20261125/akbare12/news-25-b106-numbers/rank.svg)](https://make.fun/bounty/news-image-20261125)
+[![Reward](https://make.fun/badge/news-image-20261125/akbare12/news-25-b106-numbers/reward.svg)](https://make.fun/bounty/news-image-20261125)
 
-A one-page front page with **50 verified stories from Wednesday 25 November 2026**.
+A one-page front page for **Wednesday, November 25, 2026**: **50 stories**
+in a single 1024 × 1024 image — 3 heroes, 10 cards, 37 more in ALSO.
 
-## Hero stories
+## The three heroes
 
-1. **Trump hits 14 trade partners with new tariffs** — China faces 20%, the EU 15% and Vietnam 20%.
-2. **Kospi plunges 6.16%** — Samsung −9.9% and SK Hynix −11.1% trigger a circuit breaker; foreigners sell KRW 1.95tn.
-3. **Shenzhou-24 carries the first foreign astronaut to Tiangong** — Pakistan's Muhammad Zeeshan Ali, 40.
+1. **Trump hits 14 trade partners with new tariffs** — China 20%, EU 15%,
+   Vietnam 20%. Higher import costs feed straight into US prices, supply
+   chains and holiday shopping.
+2. **Kospi crashes 6.16% in a chip rout** — Samsung −9.9%, SK Hynix −11.1%;
+   the circuit breaker trips as foreigners sell KRW 1.95tn.
+3. **First foreign astronaut reaches Tiangong** — Muhammad Zeeshan Ali, 40,
+   of Pakistan, flies on Shenzhou-24, the first foreign astronaut aboard
+   China's station.
 
-## Inside
+## The ten cards
 
-- 10 featured cards (including the Hamas security chief Naeem Abu Nahel, killed 25 Nov; the Bogor gold-mine flood, 9 dead and 17 trapped; an Iowa seizure of 9,500 lbs), each with its story number badge and a C / R / CL tag.
-- A numbers strip, a 13-pin map of the featured stories, and 37 more stories under ALSO TODAY.
-- A two-line DATE CHECK: every story is from today, 25 Nov. Left out because they are *not* today: Huawei verdict 24 Nov, PIF Tower attack 24 Nov, Sudan strikes 24 Nov, Nvidia CEO reinstated 23 Nov. The 25 Nov Gaza story (Naeem Abu Nahel) is a featured card, never a left-out item.
+Gaza (Hamas security chief Col. Mohammad Abuelouf, 47, killed with his wife
+and two daughters in a strike on Shati camp, 25 Nov) · Bogor gold mine
+(9 dead, 17 trapped 100 m down) · Iowa (9,500 lbs of lead azide seized) ·
+Cartagena (76 hostages freed) · Cairo (tanker fire kills 31) · Canberra
+($740M Solomons pact) · New York (100th Macy's parade delayed) · Madrid
+(Abrego Garcia held 90 days) · Markets (Nvidia −3.9% on downgrade watch) ·
+Thanksgiving travel rush.
 
-## How to render
+Every card and every ALSO line carries a certainty letter — **C** confirmed,
+**R** reported, **CL** claim — and every hero scene carries its number badge.
 
-```sh
-python3 gen.py        # writes entry.png (1024x1024)
-python3 main.py       # copies entry.png into ./out/
-```
+## Date check
 
-## Sources
+Every story on the page is dated Wednesday, 25 November 2026. Left out
+because they belong to other days: Huawei verdict 24 Nov, PIF Tower strike
+24 Nov, Sudan strikes 24 Nov, Nvidia CEO reinstated 23 Nov.
 
-Reuters, AP, BBC, CNN, Xinhua, Korea Exchange, pm.gov.au.
+## Also inside
+
+A 13-place world map (Washington, Madrid, Brussels, Gaza City, Cairo,
+Islamabad, Beijing, Seoul, Hanoi, Bogor, Des Moines, Cartagena, Canberra),
+a by-the-numbers strip (20%, −6.16%, 9,500 lbs, 76, 31, 9, 17, $740M,
+−3.9%, 100th, 90 days, 47, 40, 100 m), and sources: Reuters, AP, BBC, CNN,
+Xinhua, Korea Exchange, pm.gov.au.
+
+## Verification
+
+Rendered and checked on 26 November 2026: `entry.png` is 1024 × 1024 and
+under 1 MiB; `main.py` passes a standard-library-only simulation (fresh
+venv without Pillow, different working directory, empty output directory)
+with exit code 0 and a matching SHA-256 digest.
 
 ## Files
 
-- `gen.py` — renders `entry.png` (1024×1024) at build time with Pillow.
-- `main.py` — stdlib-only entry point: copies `entry.png` into `MAKEFUN_OUTPUT_DIR`.
-- `entry.png` — the submitted front page.
+- `entry.png` — the finished front page, 1024 × 1024.
+- `gen.py` — build-time renderer (Pillow) that drew `entry.png`.
+- `main.py` — stdlib-only entry point: copies `entry.png` to
+  `MAKEFUN_OUTPUT_DIR`. No third-party imports, so it runs in the
+  standard-library-only grader.
+- `LICENSE` — MIT.
 
-Built for the [news-image-20261125](https://make.fun/bounty/news-image-20261125) bounty on [make.fun](https://make.fun/bounty/news-image-20261125).
+## Rebuild
+
+```sh
+python3 gen.py          # renders entry.png
+python3 main.py         # copies entry.png to out/entry.png
+```
